@@ -1,4 +1,4 @@
-[1543](https://leetcode.com/contest/weekly-contest-200/problems/count-good-triplets/)
+
 class Solution {
 public:
     int countGoodTriplets(vector<int>& arr, int a, int b, int c) {
