@@ -1,28 +1,14 @@
 class Solution {
 public:
-    vector<int> mostVisited(int n, vector<int>& rounds) {
-        vector<int> ans;
-        int start = rounds[0];
-        int size = rounds.size();
-        int end = rounds[size - 1];
-        if(start <= end){
-            for(int i = start ; i <= end; i++ ){
-                ans.push_back(i);
+    bool areAlmostEqual(string s1, string s2) {
+        vector<int> v;
+        for(int i = 0; i < s1.length() && v.size()< 3; i++){
+            if(s1[i] != s2[i]){
+                v.push_back(i);
             }
-            return ans;
         }
-        else{
-            for(int i = 1; i <=end; i++)
-                ans.push_back(i);
-            
-           
-            for(int i = start ; i <= n; i++)
-              ans.push_back(i);
-        }
-        
-        return ans;
-        
-        
+       
+        return (v.size() == 0 )|| (v.size() == 2 && (s1[v[0]] == s2[v[1]] && s1[v[1]] == s2[v[0]]));
         
     }
 };
