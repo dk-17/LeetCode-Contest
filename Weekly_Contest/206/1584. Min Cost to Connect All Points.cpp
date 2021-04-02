@@ -30,7 +30,7 @@ public:
         vector<pair<int,pair<int,int>> >edges;
         for(int i = 0; i < n; i++){
             for(int j = i+1; j < n; j++){
-                if(j != i){
+                
                     int x1 = points[i][0];
                     int y1 = points[i][1];
                     int x2 = points[j][0];
@@ -38,7 +38,7 @@ public:
                     int cost = abs(x1 - x2) + abs(y1 - y2);
                     
                     edges.push_back({cost,{i,j}});
-                }
+                
             }
         }
         sort(edges.begin(),edges.end());
@@ -68,11 +68,6 @@ public:
             
         }
         
-        return ans;
-        
-        
-        
-        
-        
+        return ans;   
     }
 };
