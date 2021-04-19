@@ -65,9 +65,7 @@ public:
             }
         }
         
-    }
-    
-    
+    }   
     
     int minReorder(int n, vector<vector<int>>& c) {
      out.resize(n);
